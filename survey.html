@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-top: 75px;
+  Padding: 50px 0px 5px 0px;
+}
+body {
+  background-color: rgb(245, 108, 49);
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+#survey-form {
+  background-color: #80aaef;
+  text-align: center;
+  margin: 0px auto;
+  border-radius: 5px;
+  max-width: 900px;
+  min-width: 600px;
+  width: 75%;
+  padding-bottom: 50px;
+}
+#description {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 0.87em;
+}
+.input {
+  width: 280px;
+  height: 29px;
+  border-radius: 2px;
+  border: 5px;
+  border-color: grey; 
+}
+#submit {
+  background-color: #fdb2ea;
+  color: white;
+  border-radius: 4px;
+  height: 40px;
+  width: 90px;
+  border: 0px;
+  margin: 10px;
+}
+.right {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+.labels {
+  display: inline-block; 
+  text-align: right;
+  vertical-align: top;
+  width: 40%;
+  padding: 5px;
+  /* float: left; */
+}
+textarea {
+  height: 40px;
+}
+.radio, .checkbox{
+  position: relative;
+  left:-27px;
+  padding-bottom: 5px;
+  /*
+  background-color: yellow;*/
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<form id="survey-form">
+ <h1 id="title"> Survey Form </h1>
+  <p id="description"> Tell me about yourself </p>
+  
+<div id="survey-form">
+  <label for="name" id="name-label" class="labels"> Name: </label> 
+    <div class="right">
+      <input type: "text" id="name" placeholder="Enter your name here" class="input" required> 
+    </div>
+  <br> </br>
+  <label for="email" id="email-label" class="labels"> Email: </label>
+  <div class="right">
+    <input type="email" id="email" class="input" required placeholder="Enter your email here">
+  </div>
+  <br> </br>
+  <label for="number" id="number-label" class="labels">  Age: </label>
+<div class="right">
+  <input id="number" class="input" min="1" max="120" type="number" placeholder="Enter your age here">
+</div>
+<br></br> 
+<!-- dropdown -->
+<label for="food" class="labels"> What do you buy frequently:</label>
+<div class="right">
+  <select id="dropdown" name="food" class="input ">
+    <option disabled value="select"> Select an option </option>
+    <option value="pizza"> Clothes </option>
+    <option value="salad"> Electronics </option>
+    <option value="fried-rice"> Household </option>
+  </select>
+</div>
+<br> </br>
+
+<!-- radio buttons -->
+<label class="labels" for="radio" > Shirts or Hoodies? </label>
+<ul class="right" style="list-style: none;">
+  <li class="radio"> <input name="radio-buttons" value="1" type="radio"><label> Shirt</label></input> </li>
+  <li class="radio"><input name="radio-buttons" value="2" type="radio"><label> Hoodies</label></input></li>
+</ul>
+
+<!-- checkbox -->
+<label for="sports" class="labels"> What product you liked purchasing? (check all that apply)</label>
+<ul id="sports" style="list-style: none" class="right" >
+  <li class="checkbox"><label><input type="checkbox" id="basketball" value="1"> Shirt </label></input></li>
+  <li class="checkbox"><label><input type="checkbox" id="soccer" value="2"> Jeans </label></input></li>
+  <li class="checkbox"><label><input type="checkbox" id="baseball" value="3"> Laptop/Computers </label></input></li>
+  <li class="checkbox"><label><input type="checkbox" id="badminton"value="4"> Mobile phone/accessories </label></input></li>
+  <li class="checkbox"><label><input type="checkbox" id="football" value="5"> Kitchen Products </label></input></li>
+  <li class="checkbox"><label><input type="checkbox" id="taekwondo" value="6"> Washing Machine </label></input></li>
+  <li class="checkbox"><label><input type="checkbox" id="tv" value="7"> Bed</label></input></li>
+</ul>
+<!-- comments -->
+<label for="comment" class="labels"> Any Comments or Suggestions? </label>
+<div>
+<textarea name="comment" rows="8" columns="80" class="input right" placeholder="Enter comments here..."></textarea>
+</div>
+<br> </br>
+<button id="submit" type="submit" onclick="window.location.href='index.html';"> Submit </button>
+  
+    
+    </div>
+</form>
+</body>
+</html>
